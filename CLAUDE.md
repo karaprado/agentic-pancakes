@@ -1,113 +1,68 @@
-# Claude Code Configuration - Agentics Hackathon + ARW
-
-## Project Overview
-
-This repository contains two main components:
-
-### 1. Agentics Foundation TV5 Hackathon CLI
-- **Location**: `src/` directory
-- **Purpose**: CLI tool and MCP server for hackathon participants
-- **Commands**: `init`, `tools`, `status`, `info`, `mcp`, `discord`, `help`
-- **MCP Server**: Full implementation with tools, resources, and prompts
-
-### 2. ARW (Agent-Ready Web) Reference Implementations
-- **Apps**: `apps/media-discovery/` (Next.js), `apps/arw-chrome-extension/` (Chrome)
-- **Packages**: `packages/schemas/`, `packages/validators/`, `packages/badges/`
-- **Specification**: `spec/ARW-0.1-draft.md`
-
-## Key Directories
-
-```
-hackathon-tv5/
-├── src/                    # Hackathon CLI source (TypeScript)
-│   ├── cli.ts             # Main entry point
-│   ├── commands/          # CLI commands
-│   ├── mcp/               # MCP server (server.ts, stdio.ts, sse.ts)
-│   └── constants.ts       # Tracks, tools, URLs
-├── apps/
-│   ├── media-discovery/   # AI Media Discovery demo (Next.js + ARW)
-│   └── arw-chrome-extension/  # ARW Inspector browser extension
-├── packages/
-│   ├── @arw/schemas/      # TypeScript schemas with Zod
-│   ├── schemas/           # JSON schemas for validation
-│   ├── validators/        # Python & Node.js validators
-│   ├── validator/         # ARW validator CLI tool
-│   ├── cli/               # Rust ARW CLI (advanced tooling)
-│   ├── crawler-sdk/       # TypeScript SDK for crawler service
-│   ├── crawler-service/   # High-performance crawler API
-│   ├── nextjs-plugin/     # Next.js ARW integration
-│   └── badges/            # ARW compliance badges (SVG)
-├── spec/                  # ARW specification
-└── docs/                  # Documentation
-```
-
-## Build Commands
-
-```bash
-# Root CLI
-npm run build              # Build CLI
-npm run dev                # Watch mode
-npm run lint               # Linting
-npm run mcp:stdio          # Start MCP server (stdio)
-npm run mcp:sse            # Start MCP server (SSE)
-
-# Media Discovery App
-cd apps/media-discovery
-npm run dev                # Development server
-npm run build              # Production build
-```
+# Claude Code Configuration - SPARC Development Environment
 
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
 **ABSOLUTE RULES**:
-
 1. ALL operations MUST be concurrent/parallel in a single message
 2. **NEVER save working files, text/mds and tests to the root folder**
 3. ALWAYS organize files in appropriate subdirectories
-4. **USE CLAUDE CODE'S TASK TOOL** for spawning agents concurrently
+4. **USE CLAUDE CODE'S TASK TOOL** for spawning agents concurrently, not just MCP
 
 ### ⚡ GOLDEN RULE: "1 MESSAGE = ALL RELATED OPERATIONS"
 
 **MANDATORY PATTERNS:**
-
 - **TodoWrite**: ALWAYS batch ALL todos in ONE call (5-10+ todos minimum)
 - **Task tool (Claude Code)**: ALWAYS spawn ALL agents in ONE message with full instructions
 - **File operations**: ALWAYS batch ALL reads/writes/edits in ONE message
 - **Bash commands**: ALWAYS batch ALL terminal operations in ONE message
 - **Memory operations**: ALWAYS batch ALL memory store/retrieve in ONE message
 
+### 🎯 CRITICAL: Claude Code Task Tool for Agent Execution
+
+**Claude Code's Task tool is the PRIMARY way to spawn agents:**
+```javascript
+// ✅ CORRECT: Use Claude Code's Task tool for parallel agent execution
+[Single Message]:
+  Task("Research agent", "Analyze requirements and patterns...", "researcher")
+  Task("Coder agent", "Implement core features...", "coder")
+  Task("Tester agent", "Create comprehensive tests...", "tester")
+  Task("Reviewer agent", "Review code quality...", "reviewer")
+  Task("Architect agent", "Design system architecture...", "system-architect")
+```
+
+**MCP tools are ONLY for coordination setup:**
+- `mcp__claude-flow__swarm_init` - Initialize coordination topology
+- `mcp__claude-flow__agent_spawn` - Define agent types for coordination
+- `mcp__claude-flow__task_orchestrate` - Orchestrate high-level workflows
+
 ### 📁 File Organization Rules
 
 **NEVER save to root folder. Use these directories:**
-
-- `/src` - Hackathon CLI source code
-- `/apps` - Demo applications (media-discovery, chrome extension)
-- `/packages` - Shared packages (schemas, validators, etc.)
-- `/spec` - ARW specification documents
-- `/docs` - Documentation and guides
+- `/src` - Source code files
+- `/tests` - Test files
+- `/docs` - Documentation and markdown files
+- `/config` - Configuration files
 - `/scripts` - Utility scripts
+- `/examples` - Example code
 
-## Development Methodology
+## Project Overview
 
 This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with Claude-Flow orchestration for systematic Test-Driven Development.
 
 ## SPARC Commands
 
 ### Core Commands
-
 - `npx claude-flow sparc modes` - List available modes
 - `npx claude-flow sparc run <mode> "<task>"` - Execute specific mode
 - `npx claude-flow sparc tdd "<feature>"` - Run complete TDD workflow
 - `npx claude-flow sparc info <mode>` - Get mode details
 
 ### Batchtools Commands
-
 - `npx claude-flow sparc batch <modes> "<task>"` - Parallel execution
 - `npx claude-flow sparc pipeline "<task>"` - Full pipeline processing
 - `npx claude-flow sparc concurrent <mode> "<tasks-file>"` - Multi-task processing
 
 ### Build Commands
-
 - `npm run build` - Build project
 - `npm run test` - Run tests
 - `npm run lint` - Linting
@@ -132,45 +87,35 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 ## 🚀 Available Agents (54 Total)
 
 ### Core Development
-
 `coder`, `reviewer`, `tester`, `planner`, `researcher`
 
 ### Swarm Coordination
-
 `hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`, `collective-intelligence-coordinator`, `swarm-memory-manager`
 
 ### Consensus & Distributed
-
 `byzantine-coordinator`, `raft-manager`, `gossip-coordinator`, `consensus-builder`, `crdt-synchronizer`, `quorum-manager`, `security-manager`
 
 ### Performance & Optimization
-
 `perf-analyzer`, `performance-benchmarker`, `task-orchestrator`, `memory-coordinator`, `smart-agent`
 
 ### GitHub & Repository
-
 `github-modes`, `pr-manager`, `code-review-swarm`, `issue-tracker`, `release-manager`, `workflow-automation`, `project-board-sync`, `repo-architect`, `multi-repo-swarm`
 
 ### SPARC Methodology
-
 `sparc-coord`, `sparc-coder`, `specification`, `pseudocode`, `architecture`, `refinement`
 
 ### Specialized Development
-
 `backend-dev`, `mobile-dev`, `ml-developer`, `cicd-engineer`, `api-docs`, `system-architect`, `code-analyzer`, `base-template-generator`
 
 ### Testing & Validation
-
 `tdd-london-swarm`, `production-validator`
 
 ### Migration & Planning
-
 `migration-planner`, `swarm-init`
 
 ## 🎯 Claude Code vs MCP Tools
 
 ### Claude Code Handles ALL EXECUTION:
-
 - **Task tool**: Spawn and run agents concurrently for actual work
 - File operations (Read, Write, Edit, MultiEdit, Glob, Grep)
 - Code generation and programming
@@ -183,7 +128,6 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 - Testing and debugging
 
 ### MCP Tools ONLY COORDINATE:
-
 - Swarm initialization (topology setup)
 - Agent type definitions (coordination patterns)
 - Task orchestration (high-level planning)
@@ -206,31 +150,24 @@ claude mcp add flow-nexus npx flow-nexus@latest mcp start  # Optional: Cloud fea
 ## MCP Tool Categories
 
 ### Coordination
-
 `swarm_init`, `agent_spawn`, `task_orchestrate`
 
 ### Monitoring
-
 `swarm_status`, `agent_list`, `agent_metrics`, `task_status`, `task_results`
 
 ### Memory & Neural
-
 `memory_usage`, `neural_status`, `neural_train`, `neural_patterns`
 
 ### GitHub Integration
-
 `github_swarm`, `repo_analyze`, `pr_enhance`, `issue_triage`, `code_review`
 
 ### System
-
 `benchmark_run`, `features_detect`, `swarm_monitor`
 
 ### Flow-Nexus MCP Tools (Optional Advanced Features)
-
 Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
 
 **Key MCP Tool Categories:**
-
 - **Swarm & Agents**: `swarm_init`, `swarm_scale`, `agent_spawn`, `task_orchestrate`
 - **Sandboxes**: `sandbox_create`, `sandbox_execute`, `sandbox_upload` (cloud execution)
 - **Templates**: `template_list`, `template_deploy` (pre-built project templates)
@@ -240,7 +177,6 @@ Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
 - **Storage**: `storage_upload`, `storage_list` (cloud file management)
 
 **Authentication Required:**
-
 - Register: `mcp__flow-nexus__user_register` or `npx flow-nexus@latest register`
 - Login: `mcp__flow-nexus__user_login` or `npx flow-nexus@latest login`
 - Access 70+ specialized MCP tools for advanced orchestration
@@ -265,10 +201,10 @@ Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
   Task("Test Engineer", "Write Jest tests. Check memory for API contracts.", "tester")
   Task("DevOps Engineer", "Setup Docker and CI/CD. Document in memory.", "cicd-engineer")
   Task("Security Auditor", "Review authentication. Report findings via hooks.", "reviewer")
-
+  
   // All todos batched together
   TodoWrite { todos: [...8-10 todos...] }
-
+  
   // All file operations together
   Write "backend/server.js"
   Write "frontend/App.jsx"
@@ -280,21 +216,18 @@ Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
 ### Every Agent Spawned via Task Tool MUST:
 
 **1️⃣ BEFORE Work:**
-
 ```bash
 npx claude-flow@alpha hooks pre-task --description "[task]"
 npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]"
 ```
 
 **2️⃣ DURING Work:**
-
 ```bash
 npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
 npx claude-flow@alpha hooks notify --message "[what was done]"
 ```
 
 **3️⃣ AFTER Work:**
-
 ```bash
 npx claude-flow@alpha hooks post-task --task-id "[task]"
 npx claude-flow@alpha hooks session-end --export-metrics true
@@ -320,7 +253,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
   Task("Database agent", "Design and implement database schema. Store decisions in memory.", "code-analyzer")
   Task("Tester agent", "Create comprehensive test suite with 90% coverage.", "tester")
   Task("Reviewer agent", "Review code quality and security. Document findings.", "reviewer")
-
+  
   // Batch ALL todos in ONE call
   TodoWrite { todos: [
     {id: "1", content: "Research API patterns", status: "in_progress", priority: "high"},
@@ -332,7 +265,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
     {id: "7", content: "API documentation", status: "pending", priority: "low"},
     {id: "8", content: "Performance optimization", status: "pending", priority: "low"}
   ]}
-
+  
   // Parallel file operations
   Bash "mkdir -p app/{src,tests,docs,config}"
   Write "app/package.json"
@@ -342,7 +275,6 @@ npx claude-flow@alpha hooks session-end --export-metrics true
 ```
 
 ### ❌ WRONG (Multiple Messages):
-
 ```javascript
 Message 1: mcp__claude-flow__swarm_init
 Message 2: Task("agent 1")
@@ -361,7 +293,6 @@ Message 4: Write "file.js"
 ## Hooks Integration
 
 ### Pre-Operation
-
 - Auto-assign agents by file type
 - Validate commands for safety
 - Prepare resources automatically
@@ -369,7 +300,6 @@ Message 4: Write "file.js"
 - Cache searches
 
 ### Post-Operation
-
 - Auto-format code
 - Train neural patterns
 - Update memory
@@ -377,7 +307,6 @@ Message 4: Write "file.js"
 - Track token usage
 
 ### Session Management
-
 - Generate summaries
 - Persist state
 - Track metrics
@@ -416,67 +345,83 @@ Message 4: Write "file.js"
 Remember: **Claude Flow coordinates, Claude Code creates!**
 
 # important-instruction-reminders
-
 Do what has been asked; nothing more, nothing less.
 NEVER create files unless they're absolutely necessary for achieving your goal.
 ALWAYS prefer editing an existing file to creating a new one.
-NEVER proactively create documentation files (\*.md) or README files. Only create documentation files if explicitly requested by the User.
+NEVER proactively create documentation files (*.md) or README files. Only create documentation files if explicitly requested by the User.
 Never save working files, text/mds and tests to the root folder.
 
-# Mintlify documentation
 
-## Working relationship
+---
 
-- You can push back on ideas-this can lead to better documentation. Cite sources and explain your reasoning when you do so
-- ALWAYS ask for clarification rather than making assumptions
-- NEVER lie, guess, or make up anything
+# Agentic QE Fleet Configuration
 
-## Project context
+## ⚠️ INTEGRITY RULE (ABSOLUTE)
 
-- Format: MDX files with YAML frontmatter
-- Config: docs.json for navigation, theme, settings
-- Components: Mintlify components
+**We value the quality we deliver to our users.**
 
-## Content strategy
+- ❌ NO shortcuts - do the work properly or don't do it
+- ❌ NO fake data - use real data, real tests, real results
+- ❌ NO false claims - only report what actually works and is verified
+- ✅ ALWAYS implement all code/tests with proper implementation
+- ✅ ALWAYS verify before claiming success
+- ✅ ALWAYS use real database queries, not mocks, for integration tests
+- ✅ ALWAYS run actual tests, not assume they pass
 
-- Document just enough for user success - not too much, not too little
-- Prioritize accuracy and usability
-- Make content evergreen when possible
-- Search for existing content before adding anything new. Avoid duplication unless it is done for a strategic reason
-- Check existing patterns for consistency
-- Start by making the smallest reasonable changes
+---
 
-## docs.json
+## 🤖 Agentic QE Fleet Quick Reference
 
-- Refer to the [docs.json schema](https://mintlify.com/docs.json) when building the docs.json file and site navigation
+**31 QE Agents:** Test generation, coverage analysis, performance, security, flaky detection
+**77 QE Skills:** agentic-quality-engineering, tdd-london-chicago, api-testing-patterns, six-thinking-hats, brutal-honesty-review, cicd-pipeline-qe-orchestrator
+**8 Slash Commands:** `/aqe-execute`, `/aqe-generate`, `/aqe-coverage`, `/aqe-quality`
 
-## Frontmatter requirements for pages
+### 📚 Complete Documentation
 
-- title: Clear, descriptive page title
-- description: Concise summary for SEO/navigation
+- **[Agent Reference](https://github.com/proffesor-for-testing/agentic-qe/blob/main/docs/reference/agents.md)** - All 31 QE agents with capabilities and usage
+- **[Skills Reference](https://github.com/proffesor-for-testing/agentic-qe/blob/main/docs/reference/skills.md)** - All 77 QE skills organized by category
+- **[Usage Guide](https://github.com/proffesor-for-testing/agentic-qe/blob/main/docs/reference/usage.md)** - Complete usage examples and workflows
 
-## Writing standards
+### 🎯 Quick Start
 
-- Second-person voice ("you")
-- Prerequisites at start of procedural content
-- Test all code examples before publishing
-- Match style and formatting of existing pages
-- Include both basic and advanced use cases
-- Language tags on all code blocks
-- Alt text on all images
-- Relative paths for internal links
+**Spawn agents:**
+```javascript
+Task("Generate tests", "Create test suite for UserService", "qe-test-generator")
+Task("Analyze coverage", "Find gaps using O(log n)", "qe-coverage-analyzer")
+```
 
-## Git workflow
+**Check learning status:**
+```bash
+aqe learn status --agent test-gen
+aqe patterns list --framework jest
+```
 
-- NEVER use --no-verify when committing
-- Ask how to handle uncommitted changes before starting
-- Create a new branch when no clear branch exists for changes
-- Commit frequently throughout development
-- NEVER skip or disable pre-commit hooks
+### 🎯 Fleet Configuration
 
-## Do not
+**Topology**: hierarchical
+**Max Agents**: 10
+**Testing Focus**: unit, integration
+**Environments**: development
+**Frameworks**: jest
 
-- Skip frontmatter on any MDX file
-- Use absolute URLs for internal links
-- Include untested code examples
-- Make assumptions - always ask for clarification
+### 📋 Memory Namespace
+
+Agents share state through the **`aqe/*` memory namespace**:
+- `aqe/test-plan/*` - Test planning and requirements
+- `aqe/coverage/*` - Coverage analysis and gaps
+- `aqe/quality/*` - Quality metrics and gates
+- `aqe/performance/*` - Performance test results
+- `aqe/security/*` - Security scan findings
+- `aqe/swarm/coordination` - Cross-agent coordination
+
+### 💡 Key Principles
+- Use Task tool for agent execution (not just MCP)
+- Batch all operations in single messages (TodoWrite, file ops, etc.)
+- Test with actual databases, not mocks
+- Document only what actually works
+
+---
+
+**Generated by**: Agentic QE Fleet v2.1.0
+**Initialization Date**: 2025-12-04T09:43:18.382Z
+**Fleet Topology**: hierarchical
