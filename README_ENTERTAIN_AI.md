@@ -140,7 +140,7 @@ Influence stats
 Community trust layer
 
 
-## 🎥 Product Overview (5 minutes):https://drive.google.com/file/d/1kHfN9HBGDdpoxRwqybIxdqKqYp2dxpfi/view?usp=drive_link
+## 🎥 Product Overview (5 minutes): https://drive.google.com/file/d/1kHfN9HBGDdpoxRwqybIxdqKqYp2dxpfi/view?usp=drive_link
 
 
 ## 🎬 Watch the AI learning behavior in real time:
