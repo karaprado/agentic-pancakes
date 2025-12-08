@@ -193,7 +193,7 @@ Open-source frameworks
 Aura builder frontend
 
 
-## **🧭 Vision**
+## 🧭 Vision**
 
 The future of media isn’t more content.
 It’s better understanding.
@@ -201,12 +201,12 @@ It’s better understanding.
 We’re building a personal AI companion for content — not another scrolling platform.
 
 
-## **👉 Try it here:**
+## 👉 Try it here:**
 [https://ai-entertainm-31.aura.build](https://drive.google.com/file/d/1nm0IUibi5_VSDl9YfGka981a_-lvZgiz/view?usp=sharing)
 
 # **🏁 Final Thought**
 
-## **From chaos → clarity
-From scrolling → knowing
+## From chaos → clarity
+**From scrolling → knowing
 From feeds → humans**
 
