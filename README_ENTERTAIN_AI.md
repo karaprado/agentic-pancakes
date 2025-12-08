@@ -140,7 +140,7 @@ Influence stats
 Community trust layer
 
 
-## 🎥 Product Interface:https://ai-entertainm-31.aura.build 
+## 🎥 Product Overview (5 minutes):(https://drive.google.com/file/d/1nm0IUibi5_VSDl9YfGka981a_-lvZgiz/view?usp=sharing)
 
 
 ## 🎬 Watch the AI learning behavior in real time:
@@ -206,8 +206,8 @@ It’s better understanding.
 We’re building a personal AI companion for content — not another scrolling platform.
 
 
-## 👉 Try it here:
-[https://ai-entertainm-31.aura.build](https://drive.google.com/file/d/1nm0IUibi5_VSDl9YfGka981a_-lvZgiz/view?usp=sharing)
+## 👉 Try it here:https://ai-entertainm-31.aura.build
+
 
 # 🏁 Final Thought
 
