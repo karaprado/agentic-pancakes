@@ -111,7 +111,7 @@ Ads align with intent — not interruption
 Yellow blocks = competitive advantages
 
 
-## 📱 User Experience**
+## 📱 User Experience
 
 Entry: Intent First Interface
 
@@ -140,7 +140,7 @@ Influence stats
 Community trust layer
 
 
-## 🎥 Product Interface**:https://ai-entertainm-31.aura.build 
+## 🎥 Product Interface:https://ai-entertainm-31.aura.build 
 
 
 ## 🎬 Watch the AI learning behavior in real time:
