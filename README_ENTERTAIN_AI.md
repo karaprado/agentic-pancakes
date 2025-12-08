@@ -1,4 +1,4 @@
-# **🎬 EntertainAI — From Scrolling to Knowing**
+# **🎬 EntertainAI — From Doom Scrolling to Knowing**
 
 Reinventing Media Discovery with AI
 
