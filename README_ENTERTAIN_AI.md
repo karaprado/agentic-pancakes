@@ -1,9 +1,9 @@
-🎬 EntertainAI — From Scrolling to Knowing
+**🎬 EntertainAI — From Scrolling to Knowing**
 
 Reinventing Media Discovery with AI
 
 
-🎯 The Challenge
+**🎯 The Challenge**
 
 <img width="600" height="600" alt="Screenshot 2025-12-07 at 4 18 48 PM" src="https://github.com/user-attachments/assets/84f4d539-d210-4251-8f70-f08a7aa14300" />
 
@@ -28,7 +28,7 @@ The Vision of the team Ofer, Lanette, Eva, Kara, Danelle, Camila, Juan, Anne
 [Discovery_Reimagined.pdf](https://github.com/user-attachments/files/24020789/Discovery_Reimagined.pdf)
 
 
-🌀 The Problem: Doom Scrolling
+**🌀 The Problem: Doom Scrolling**
 
 <img width="600" height="600" alt="Screenshot 2025-12-07 at 4 16 35 PM" src="https://github.com/user-attachments/assets/a29be108-afe0-40ed-b1f0-2851aef5efe9" />
 
@@ -43,12 +43,12 @@ Create burnout and decision fatigue
 Benefit platforms over people
 
 
-📸 Visual framing the pain:
+**📸 Visual framing the pain:**
 
 <img width="600" height="600" alt="xScreenshot 2025-12-07 at 4 07 20 PM" src="https://github.com/user-attachments/assets/eadde43f-937f-4f3c-b738-7e9ff8cb0589" />
 
 
-🌱 The Shift: Bloom Scrolling
+**🌱 The Shift: Bloom Scrolling**
 
 <img width="600" height="600" alt="Screenshot 2025-12-07 at 4 08 13 PM" src="https://github.com/user-attachments/assets/43d49ae1-0a42-465d-a184-6e0f1428a52b" />
 
@@ -65,7 +65,7 @@ We don’t serve feeds.
 We serve people.
 
 
-🧠 Our Solution: Conversational Discovery
+**🧠 Our Solution: Conversational Discovery**
 
 <img width="600" height="600" alt="Screenshot 2025-12-07 at 4 07 07 PM" src="https://github.com/user-attachments/assets/41b417f0-a750-41e4-b48b-a2fb59ec9247" />
 
@@ -77,15 +77,15 @@ The AI understands.
 Results appear instantly.
 
 
-📄 Full narrative explanation:
-👉 Discovery_Reimagined.pdf — product story + architecture walkthrough
+**📄 Full narrative explanation:
+👉 Discovery_Reimagined.pdf — product story + architecture walkthrough**
 
 <img width="600" height="600" alt="Doom Scrolling to Bloom Scrolling" src="https://github.com/user-attachments/assets/5285c693-9052-4c10-a070-4b1f34e556c9" />
 
 Discovery_Reimagined
 
 
-🔁 System Architecture
+**🔁 System Architecture**
 
 How It Works:
 
@@ -106,7 +106,8 @@ Ads align with intent — not interruption
 Yellow blocks = competitive advantages
 
 
-📱 User Experience
+**📱 User Experience**
+
 Entry: Intent First Interface
 
 Users tell the system:
@@ -134,12 +135,12 @@ Influence stats
 Community trust layer
 
 
-🎥 Product Interface:https://drive.google.com/file/d/1nm0IUibi5_VSDl9YfGka981a_-lvZgiz/view?usp=sharing 
+**🎥 Product Interface**:https://drive.google.com/file/d/1nm0IUibi5_VSDl9YfGka981a_-lvZgiz/view?usp=sharing 
 
 
-🎬 Watch the AI learning behavior in real time:
+**🎬 Watch the AI learning behavior in real time:**
 
-⚖️ Old Way vs New Way
+**⚖️ Old Way vs New Way**
 Old Algorithms	EntertainAI
 Engagement-based	Intention-based
 Endless scroll	Conversation
@@ -149,7 +150,7 @@ Click behavior	Trust & context
 Passive feed	Active agency
 
 
-💡 Ethical Monetization
+**💡 Ethical Monetization**
 
 <img width="600" height="600" alt="Screenshot 2025-12-07 at 4 06 16 PM" src="https://github.com/user-attachments/assets/5a34cd8c-5392-45ef-ad8e-3b4352084d1a" />
 
@@ -164,10 +165,10 @@ Context
 
 Content relevance
 
-We don’t sell attention.
-We enable discovery.
+**We don’t sell attention.
+We enable discovery.**
 
-🌍 Community Intelligence
+**🌍 Community Intelligence**
 
 Discovery gets better when:
 
@@ -179,7 +180,7 @@ Influence becomes portable trust
 
 Authority beats popularity
 
-🛠 Tech Stack
+**🛠 Tech Stack**
 
 Google Cloud
 
@@ -192,7 +193,7 @@ Open-source frameworks
 Aura builder frontend
 
 
-🧭 Vision
+**🧭 Vision**
 
 The future of media isn’t more content.
 It’s better understanding.
@@ -200,12 +201,12 @@ It’s better understanding.
 We’re building a personal AI companion for content — not another scrolling platform.
 
 
-👉 Try it here:
+**👉 Try it here:**
 https://ai-entertainm-31.aura.build
 
-🏁 Final Thought
+**🏁 Final Thought**
 
-From chaos → clarity
+**From chaos → clarity
 From scrolling → knowing
-From feeds → humans
+From feeds → humans**
 
