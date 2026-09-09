@@ -1,0 +1,27 @@
+{
+  "projectName": "agentic-pancakes",
+  "teamName": "agentic-pancakes",
+  "track": "entertainment-discovery",
+  "tools": {
+    "claudeCode": false,
+    "geminiCli": false,
+    "claudeFlow": false,
+    "agenticFlow": false,
+    "flowNexus": false,
+    "adk": false,
+    "googleCloudCli": false,
+    "vertexAi": false,
+    "ruvector": false,
+    "agentDb": false,
+    "agenticSynth": false,
+    "strangeLoops": false,
+    "sparc": false,
+    "lionpride": false,
+    "agenticFramework": false,
+    "openaiAgents": true
+  },
+  "mcpEnabled": true,
+  "discordLinked": true,
+  "initialized": true,
+  "createdAt": "2025-12-05T16:24:48.050Z"
+}
